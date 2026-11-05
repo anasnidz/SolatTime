@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolatTime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🕌 SolatTime</h1>
+    <p>Your daily prayer time companion</p>
+    <nav>
+      <button id="dashboardNav">Prayer Dashboard</button>
+      <button id="plannerNav">Activity Planner</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboardPage">
+      <section class="panel">
+        <h2>Find Prayer Times</h2>
+
+        <label for="cityInput">City</label>
+        <input id="cityInput" type="text" value="Kuala Lumpur">
+
+        <label for="countryInput">Country</label>
+        <input id="countryInput" type="text" value="Malaysia">
+
+        <button id="searchBtn">Get Prayer Times</button>
+        <p id="statusMessage" role="status"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Today's Prayer Schedule</h2>
+        <p id="dateText">Prayer times will appear here.</p>
+        <div id="prayerTimes">Select Get Prayer Times to begin.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Next Prayer</h2>
+        <div id="nextPrayer">Waiting for prayer times.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Suggested Activity</h2>
+        <div id="suggestion">Your suggestion will appear here.</div>
+      </section>
+    </section>
+
+    <section id="plannerPage" class="hidden">
+      <section class="panel">
+        <h2>Activity Planner</h2>
+        <p>Create and manage your personal religious activities.</p>
+
+        <form id="activityForm">
+          <label for="activityName">Activity name</label>
+          <input id="activityName" type="text"
+                 placeholder="e.g. Read the Quran" required>
+
+          <label for="activityTime">Time</label>
+          <input id="activityTime" type="time" required>
+
+          <label for="activityNotes">Notes (optional)</label>
+          <textarea id="activityNotes"
+                    placeholder="Add a note"></textarea>
+
+          <button type="submit" id="saveActivityBtn">Add Activity</button>
+          <button type="button" id="cancelEditBtn" class="hidden">
+            Cancel Edit
+          </button>
+        </form>
+
+        <p id="plannerMessage" role="status"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Saved Activities</h2>
+        <p id="activityCount">0 activities saved</p>
+        <div id="activityList">No activities saved yet.</div>
+      </section>
+
+      <button id="backDashboardBtn">Back to Prayer Dashboard</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>SolatTime — Plan your day around prayer.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

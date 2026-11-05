@@ -1,0 +1,169 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f7f3;
+  color: #24352b;
+}
+
+header {
+  background: #176b4d;
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+main {
+  width: 92%;
+  max-width: 850px;
+  margin: 24px auto;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+h2 {
+  color: #176b4d;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #bdcbbf;
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #176b4d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #105238;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+nav button {
+  margin-top: 0;
+  background: white;
+  color: #176b4d;
+}
+
+nav button:hover {
+  background: #e4f1e8;
+}
+
+#prayerTimes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.prayer-card {
+  padding: 14px;
+  border-radius: 8px;
+  background: #eaf5ed;
+  text-align: center;
+}
+
+.prayer-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #176b4d;
+}
+
+.activity-card {
+  border: 1px solid #dce6dd;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.activity-card h3 {
+  margin: 0 0 8px;
+}
+
+.activity-card button {
+  margin-right: 8px;
+}
+
+.delete-btn {
+  background: #a63232;
+}
+
+.delete-btn:hover {
+  background: #812323;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#statusMessage,
+#plannerMessage {
+  font-weight: bold;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  color: #526358;
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 95%;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+}
